@@ -52,6 +52,7 @@ export default {
     submitForm(formName) {
       //   console.log(formName)
       this.$refs[formName].validate((valid) => {
+        // console.log(this.$refs);
         if (valid) {
           loginApi
             .login(this.ruleForm.username, this.ruleForm.password)
@@ -60,7 +61,7 @@ export default {
               //   console.log(req)
               if (req.code == 200) {
                 //   console.log(req.data.token);
-                //   localStorage.setItem('jy_RMS',req.data.token)
+                  localStorage.setItem('jy_token',req.data.token)
                 loginApi.LoginInFo().then((res) => {
                   console.log(res.data);
                   if (res.data.code == 200) {

@@ -6,6 +6,9 @@
 
 <style lang="scss">
 $text_family:'微软雅黑';
+#id{
+  height: 100%
+}
 body{
   font-family: $text_family;
   margin: 0 auto;

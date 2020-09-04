@@ -3,7 +3,7 @@ module.exports = {
         port: 8888, // 端口号，如果端口号被占用，会自动提升1
         host: "localhost", //主机名， 127.0.0.1， 真机 0.0.0.0
         https: false, //协议
-        open: false, //启动服务时自动打开浏览器访问
+        open: true, //启动服务时自动打开浏览器访问
         //解决跨域问题
         proxy: {
             //匹配/dev-api开头请求

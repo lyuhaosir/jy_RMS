@@ -3,6 +3,12 @@ import VueRouter from "vue-router";
 import login from "../views/login";
 import layout from '../components/Layout.vue'
 
+import Home from '../views/home'
+import Goods from '../views/goods'
+import Member from '../views/member'
+import Staff from '../views/staff'
+import Supplier from '../views/supplier'
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -15,7 +21,35 @@ const routes = [
   {
     path:'/',
     name:'layout',
-    component:layout
+    component:layout,
+    redirct:'/home',
+    children:[
+      {
+        path:'/home',
+        component:Home,
+        meta:{title:'首页'}
+      },
+      {
+        path:'/member',
+        component:Member,
+        meta:{title:'会员管理'}
+      },
+      {
+        path:'/supplier',
+        component:Supplier,
+        meta:{title:'供应商管理'}
+      },
+      {
+        path:'/staff',
+        component:Staff,
+        meta:{title:'员工管理'}
+      },
+      {
+        path:'/goods',
+        component:Goods,
+        meta:{title:'商品管理'}
+      },
+    ]
   }
   // {
   //   path: "/",
