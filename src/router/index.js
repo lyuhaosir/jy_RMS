@@ -9,6 +9,9 @@ import Member from '../views/member'
 import Staff from '../views/staff'
 import Supplier from '../views/supplier'
 
+import datalist from "./dataAdmin";
+
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -22,7 +25,7 @@ const routes = [
     path:'/',
     name:'layout',
     component:layout,
-    redirct:'/home',
+    redirect:'/home',
     children:[
       {
         path:'/home',
@@ -49,6 +52,7 @@ const routes = [
         component:Goods,
         meta:{title:'商品管理'}
       },
+      ...datalist
     ]
   }
   // {

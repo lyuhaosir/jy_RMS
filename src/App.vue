@@ -13,4 +13,7 @@ body{
   font-family: $text_family;
   margin: 0 auto;
 }
+::-webkit-scrollbar{
+  width: 0
+}
 </style>

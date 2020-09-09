@@ -5,30 +5,44 @@
       class="el-menu-vertical-demo"
       background-color="#545c64"
       text-color="#fff"
-      :default-active='$route.path'
+      :default-active="$route.path"
       active-text-color="#ffd04b"
-      :router='true'
+      :router="true"
     >
-        <el-menu-item index="/home">
-          <i class="el-icon-s-home"></i>
-          <span slot="title">首页</span>
-        </el-menu-item>
-        <el-menu-item index="/member">
-          <i class="el-icon-user-solid"></i>
-          <span slot="title">会员管理</span>
-        </el-menu-item>
-        <el-menu-item index="/supplier">
-          <i class="el-icon-s-cooperation"></i>
-          <span slot="title">供应商管理</span>
-        </el-menu-item>
-        <el-menu-item index="/goods">
-          <i class="el-icon-s-goods"></i>
-          <span slot="title">商品管理</span>
-        </el-menu-item>
-        <el-menu-item index="/staff">
-          <i class="el-icon-user"></i>
-          <span slot="title">员工管理</span>
-        </el-menu-item>
+      <el-menu-item index="/home">
+        <i class="el-icon-s-home"></i>
+        <span slot="title">首页</span>
+      </el-menu-item>
+      <el-menu-item index="/member">
+        <i class="el-icon-user-solid"></i>
+        <span slot="title">会员管理</span>
+      </el-menu-item>
+      <el-menu-item index="/supplier">
+        <i class="el-icon-s-cooperation"></i>
+        <span slot="title">供应商管理</span>
+      </el-menu-item>
+      <el-menu-item index="/goods">
+        <i class="el-icon-s-goods"></i>
+        <span slot="title">商品管理</span>
+      </el-menu-item>
+      <el-menu-item index="/staff">
+        <i class="el-icon-user"></i>
+        <span slot="title">员工管理</span>
+      </el-menu-item>
+
+      <el-submenu index="1">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>数据管理</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/userlist">用户列表</el-menu-item>
+          <el-menu-item index="/merchant">商家列表</el-menu-item>
+          <el-menu-item index="/foodlist">食品列表</el-menu-item>
+          <el-menu-item index="/orderform">订单列表</el-menu-item>
+          <el-menu-item index="/adminlist">管理员列表</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
     </el-menu>
   </div>
 </template>
@@ -37,9 +51,7 @@
 export default {
   name: "",
   data() {
-    return {
-
-    };
+    return {};
   },
   //生命周期 - 创建完成（访问当前this实例）
   created() {},
@@ -49,9 +61,9 @@ export default {
 </script>
 <style scoped lang='scss'>
 /* @import url(); 引入css类 */
-.aside{
-  .el-menu{
-    border:0;
+.aside {
+  .el-menu {
+    border: 0;
     width: 100%;
     height: 100%;
     position: absolute;

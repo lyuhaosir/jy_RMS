@@ -15,5 +15,16 @@ export default {
         return request({
             url:'/user/info',
         })
+    },
+    // 会员数据列表
+    memberList(page,pageSize){
+        return request({
+            url:'/member/list',
+            method:'get',
+            params:{
+                page,
+                pageSize
+            }
+        })
     }
 }

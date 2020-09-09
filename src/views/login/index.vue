@@ -63,7 +63,7 @@ export default {
                 //   console.log(req.data.token);
                   localStorage.setItem('jy_token',req.data.token)
                 loginApi.LoginInFo().then((res) => {
-                  console.log(res.data);
+                  // console.log(res.data);
                   if (res.data.code == 200) {
                     localStorage.setItem(
                       "jy_info",

@@ -21,4 +21,8 @@ export default {
 </script>
 <style scoped lang="scss">
 /* @import url(); 引入css类 */
+.main{
+  padding: 0px;
+  margin: 0px;
+}
 </style>

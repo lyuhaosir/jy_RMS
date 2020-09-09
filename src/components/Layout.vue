@@ -42,14 +42,18 @@ export default {
       position: absolute;
       top: 50px;
       bottom: 0;
+      min-height: 600px;
     }
     .el-main {
-      padding: 0;
+      margin: 0;
+      padding: 10px;
+      box-sizing: border-box;;
       top:50px;
       bottom: 0;
       position: absolute;
       left: 230px;
       right: 0;
+      min-height: 600px;
     }
   }
 }

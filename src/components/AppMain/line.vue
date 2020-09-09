@@ -21,9 +21,9 @@ export default {
 .el-breadcrumb {
   height: 10px;
   padding: 20px;
-  margin: 20px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  margin: 0 0 20px 0;
 }
 .line {
   font-size: 16px;
